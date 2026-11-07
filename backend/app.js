@@ -13,7 +13,7 @@ app.use('/student', studentRoutes);
 try {
     const port = 3000; // define port variable here for safety
     app.listen(port, () => {
-        console.log(`listening to port ${port}...`);
+        console.log(`wait lang boss ${port}...`);
     });
     } catch(e) {
         console.log(e);
