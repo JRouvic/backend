@@ -5,6 +5,7 @@ import studentRoutes from "./routes/studentRoutes.js";
 //create express app
 const app = express();
 
+//backend updated
 app.use(express.json());
 
 app.use('/book', bookRoutes);
