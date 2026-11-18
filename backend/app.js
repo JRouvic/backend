@@ -1,21 +1,21 @@
 import express from "express";
-import bookRoutes from './routes/bookRoutes.js';
-import studentRoutes from "./routes/studentRoutes.js";
+import bookRoute from "./routes/bookRoutes.js";
+import studentRoute from "./routes/studentRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 //create express app
 const app = express();
-
-//backend updated
 app.use(express.json());
 
-app.use('/book', bookRoutes);
-app.use('/student', studentRoutes);
+app.use('/book', bookRoute);
+app.use('/user', userRoutes)
+app.use('/student', studentRoute);
 
 try {
-    const port = 3000; // define port variable here for safety
+    const port = 3000;
     app.listen(port, () => {
-        console.log(`wait lang boss ${port}...`);
+        console.log(`listening to port ${port}...`);
     });
-    } catch(e) {
-        console.log(e);
-    }
+} catch(e) {
+    console.log(e);
+}
