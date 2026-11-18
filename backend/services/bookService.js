@@ -47,7 +47,7 @@ export const updateBook = async (book) => {
     const existing = await doesBookExist(book);
 
     if (existing) {
-        throw new Error('Meron ng book na to!');
+        throw new Error('Book does not exist!');
     }
     //
 
